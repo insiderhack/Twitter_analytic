@@ -14,7 +14,8 @@ def auth():
 
 def create_url():
     #query = "from:twitterdev -is:retweet"    
-    query = "Tidur"
+    query = "62DaruratPKI"
+
     
     # Tweet fields are adjustable.
     # Options include:
@@ -51,15 +52,17 @@ def main():
     json_response = connect_to_endpoint(url, headers)
     json_response = json.dumps(json_response['data'], indent=4, sort_keys=True)
     print(json_response)
-
-def tw_data():
-    bearer_token = auth()
-    url = create_url()
-    headers = create_headers(bearer_token)
-    json_response = connect_to_endpoint(url, headers)
-    json_response = json.dumps(json_response['data'], indent=4, sort_keys=True)
     return json_response
 
+# def tw_data():
+#     #bearer_token = auth()
+#     #url = create_url()
+#     #headers = create_headers(bearer_token)
+#     #json_response = connect_to_endpoint(url, headers)
+#     #json_response = json.dumps(json_response['data'], indent=4, sort_keys=True)
+#     datastream = main()
+#     return datastream
+    
 
-#if __name__ == "__main__":
-#    main()
+if __name__ == "__main__":
+    main()
